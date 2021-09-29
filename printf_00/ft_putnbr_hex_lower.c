@@ -6,7 +6,7 @@
 /*   By: lfchouch <lfchouch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 00:37:21 by lfchouch          #+#    #+#             */
-/*   Updated: 2021/09/25 00:23:00 by lfchouch         ###   ########.fr       */
+/*   Updated: 2021/09/29 18:32:54 by lfchouch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 void	ft_putnbr_hex_lower(int n)
 {
-	long		x;
-	int			cpy;
+	long	x;
 
 	x = n;
 	if (n < 0)
@@ -28,11 +27,11 @@ void	ft_putnbr_hex_lower(int n)
 	else
 	{
 		if (x <= 9)
-			ft_putcharlen((x + '0'), 1);
+			ft_putchar(x + '0');
 		if (x > 9 && x <= 15)
 		{
-			cpy = x - 10;
-			ft_putcharlen((cpy + 'a'), 1);
+			x = x - 10;
+			ft_putchar(x + 'a');
 		}
 	}
 }
